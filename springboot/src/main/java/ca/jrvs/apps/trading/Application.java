@@ -20,9 +20,9 @@ import org.springframework.stereotype.Component;
 public class Application implements CommandLineRunner {
 
   private Logger logger = LoggerFactory.getLogger(Application.class);
-
+/*
   @Value("$app.init.dailyList")
-  private String[] initDailyList;
+  private String[] initDailyList;*/
 
   @Autowired
   private QuoteService quoteService;
