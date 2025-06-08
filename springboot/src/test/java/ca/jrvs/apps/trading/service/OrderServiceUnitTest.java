@@ -94,7 +94,12 @@ public class OrderServiceUnitTest {
 
     SecurityOrder securityOrderOut = orderService.executeMarketOrder(marketOrderDto);
     verify(securityOrderDao).save(captorSecurityOrder.capture());
-    assertEquals((Integer) 22, captorSecurityOrder.getValue().getId());
+    SecurityOrder captured = captorSecurityOrder.getValue();
+    assertEquals((Integer) 22, captured.getId());
+    assertEquals("FILLED", captured.getStatus());
+    assertEquals((Integer) 5, captured.getSize());
+    assertEquals("JRVS", captured.getTicker());
+    assertEquals(120d, captured.getPrice(), 0.0);
   }
 
   @Test
@@ -106,7 +111,12 @@ public class OrderServiceUnitTest {
 
     SecurityOrder securityOrderOut = orderService.executeMarketOrder(marketOrderDto);
     verify(securityOrderDao).save(captorSecurityOrder.capture());
-    assertEquals((Integer) 22, captorSecurityOrder.getValue().getId());
+    SecurityOrder captured = captorSecurityOrder.getValue();
+    assertEquals((Integer) 22, captured.getId());
+    assertEquals("FILLED", captured.getStatus());
+    assertEquals((Integer) (-5), captured.getSize());
+    assertEquals("JRVS", captured.getTicker());
+    assertEquals(100d, captured.getPrice(), 0.0);
   }
 
 
