@@ -1,5 +1,5 @@
 # Introduction
-This app will find the matched lines in all files under a directory recursively based on the pattern provided. It includes two ways of doing this: regular way to store everything in memory, and stream way for big size file. Through the implementation of this App, I am familar with different Java I/O packages, Collections, IDE functions/shortcuts, lambda, and stream API. The advantages of stream API and lambda expressions are studied and analyzed.
+This app will find the matched lines in all files under a directory recursively based on the pattern provided. It includes two ways of doing this: regular way to store everything in memory, and stream way for big size file. Through the implementation of this App, I am familiar with different Java I/O packages, Collections, IDE functions/shortcuts, lambda, and stream API. The advantages of stream API and lambda expressions are studied and analyzed.
 
 # Usage
 The program take three inputs: matching pattern, search directory, and directory for output file.
